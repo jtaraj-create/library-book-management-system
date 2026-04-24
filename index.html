@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Book Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Library Book Management System</a>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+      <div>
+        <h2 class="mb-1">Book Records</h2>
+        <p class="text-muted mb-0">Add, edit, search, and remove books.</p>
+      </div>
+      <div class="d-flex gap-2">
+        <a href="add-book.html" class="btn btn-primary">Add Book</a>
+        <button class="btn btn-outline-danger" id="clearAllBtn">Clear All</button>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-8">
+            <label for="searchInput" class="form-label">Search</label>
+            <input type="text" id="searchInput" class="form-control" placeholder="Search by title, author, or ID">
+          </div>
+          <div class="col-md-4">
+            <label for="categoryFilter" class="form-label">Category</label>
+            <select id="categoryFilter" class="form-select">
+              <option value="All">All Categories</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th>Title (ID)</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <tr>
+              <td colspan="5" class="text-center text-muted py-4">No books added yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
